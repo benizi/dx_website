@@ -6,7 +6,7 @@ describe "External pages" do
 
     	it "should have the content 'Index'" do
       		visit '/'
-      		expect(page).to have_content('index')
+      		expect(page).to have_content('Index')
     	end
   	end
 
@@ -18,12 +18,36 @@ describe "External pages" do
     	end
   	end
 
-    describe "About page" do
+    describe "Alumni page" do
 
     	it "should have the content 'Alumni'" do
       		visit '/alumni'
       		expect(page).to have_content('Alumni')
     	end#it should have...
-  	end#describe About page
+  	end#describe Alumni page
+
+  	describe "Brothers page" do
+
+    	it "should have the content 'Brothers'" do
+      		visit '/brothers'
+      		expect(page).to have_content('Brothers')
+    	end#it should have...
+  	end#describe Brothers page
+
+  	describe "Contact page" do
+
+    	it "should have the content 'Contact'" do
+      		visit '/contact'
+      		expect(page).to have_content('Contact')
+    	end#it should have...
+  	end#describe contact page
+
+  	describe "Rush page" do
+
+    	it "should have the content 'Rush'" do
+      		visit '/rush'
+      		expect(page).to have_content('Rush')
+    	end#it should have...
+  	end#describe Rush page
 
 end #describe external pages
