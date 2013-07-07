@@ -2,51 +2,53 @@ require 'spec_helper'
 
 describe "External pages" do
 
+  let(:base_title) { "Pitt Delta Chi -" }
+
 	describe "Index page" do
 
-    	it "should have the title 'Pitt Delta Chi - Welcome'" do
+    	it "should have the title 'Welcome'" do
       		visit '/'
-      		expect(page).to have_title('Pitt Delta Chi - Welcome')
+      		expect(page).to have_title("#{base_title} Welcome")
     	end
   	end
 
   	describe "About page" do
 
-    	it "should have the title 'Pitt Delta Chi - About'" do
+    	it "should have the title 'About'" do
       		visit '/about'
-      		expect(page).to have_title('Pitt Delta Chi - About')
+      		expect(page).to have_title("#{base_title} About")
     	end
   	end
 
     describe "Alumni page" do
 
-    	it "should have the title 'Pitt Delta Chi - Alumni'" do
+    	it "should have the title 'Alumni'" do
       		visit '/alumni'
-      		expect(page).to have_title('Pitt Delta Chi - Alumni')
+      		expect(page).to have_title("#{base_title} Alumni")
     	end#it should have...
   	end#describe Alumni page
 
   	describe "Brothers page" do
 
-    	it "should have the title 'Pitt Delta Chi - Brothers'" do
+    	it "should have the title 'Brothers'" do
       		visit '/brothers'
-      		expect(page).to have_title('Pitt Delta Chi - Brothers')
+      		expect(page).to have_title("#{base_title} Brothers")
     	end#it should have...
   	end#describe Brothers page
 
   	describe "Contact page" do
 
-    	it "should have the title 'Pitt Delta Chi - Contact'" do
+    	it "should have the title 'Contact'" do
       		visit '/contact'
-      		expect(page).to have_title('Pitt Delta Chi - Contact')
+      		expect(page).to have_title("#{base_title} Contact")
     	end#it should have...
   	end#describe contact page
 
   	describe "Rush page" do
 
-    	it "should have the title 'Pitt Delta Chi - Rush'" do
+    	it "should have the title 'Rush'" do
       		visit '/rush'
-      		expect(page).to have_title('Pitt Delta Chi - Rush')
+      		expect(page).to have_title("#{base_title} Rush")
     	end#it should have...
   	end#describe Rush page
 
