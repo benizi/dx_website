@@ -1,9 +1,13 @@
 DxWebsite::Application.routes.draw do
-  get "external_pages/About"
-  get "external_pages/Alumni"
-  get "external_pages/Brothers"
-  get "external_pages/Contact"
-  get "external_pages/Rush"
+  
+  #External pages (no authorization required to view)
+  root to: 'external_pages#Index'
+  match "/about",     to: "external_pages#About",     via: 'get'
+  match "/alumni",    to: "external_pages#Alumni",    via: 'get'
+  match "/brothers",  to: "external_pages#Brothers",  via: 'get'
+  match "/contact",   to: "external_pages#Contact",   via: 'get'
+  match "/rush",      to: "external_pages#Rush",      via: 'get'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
