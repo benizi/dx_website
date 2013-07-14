@@ -1,4 +1,4 @@
-#Fraternity/Sorority Chapter Management Web App
+#Greek Chapter Management Web App
 
 ##Features
 1. Forward facing website for the general public
