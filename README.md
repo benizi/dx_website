@@ -17,3 +17,4 @@ Feel free to host your own copy of this app. If you do host your own copy, let u
 1. [Celect](http://celect.org/solutions-greek#)
 2. [goZuus](http://www.gozuus.com/tour/pricing)
 3. [ChapterSpot](https://www.chapterspot.com/)
+4. [Groopt](http://groopt.com)
