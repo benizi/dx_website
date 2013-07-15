@@ -1,0 +1,150 @@
+/*--global--*/
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/*--navbar*/
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 10px;
+  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+
+.navbar-wrapper .navbar{
+  width: 100%;
+}
+
+/* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+  /*width: 100%;*/
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+          box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+  padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+  padding: 15px 20px;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+  margin: 10px 10px 10px 10px;
+}
+
+form {
+  margin: 0;
+  float: right;
+}
+
+.nav-login {
+  margin-top: 10px !important;
+
+}
+
+/*--carousel--*/
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+}
+
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+  z-index: 10;
+}
+
+.carousel .item {
+  height: 500px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+/*--responcive--*/
+
+@media (max-width: 979px) {
+
+  .navbar-wrapper .navbar{
+    width: 100%;
+  }
+
+  .navbar-inner {
+    margin: -20px 0 0 0;
+  }
+
+  form{
+    float: none;
+    margin: 0 0 30px 20px;
+  }
+
+  .carousel .item {
+    height: 500px;
+  }
+  .carousel img {
+    width: auto;
+    height: 500px;
+  }
+
+
+@media (max-width: 767px) {
+
+  body {
+    padding: 0 0 0 0;
+  }
+
+  form{
+    float: none;
+    margin: 0 0 30px 20px;
+  }
+
+  .navbar-inner {
+    margin: -20px 0 0 0;
+  }
+
+  .carousel {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .carousel .container {
+
+  }
+  .carousel .item {
+    height: 300px;
+  }
+  .carousel img {
+    height: 300px;
+  }
+
+}
