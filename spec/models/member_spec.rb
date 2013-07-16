@@ -21,6 +21,7 @@ describe Member do
 	it { should respond_to(:password) }
 	it { should respond_to(:password_confirmation) }
 	it { should respond_to(:authenticate) }
+	it { should respond_to(:name) }
 
 	it { should be_valid }
 
@@ -63,6 +64,10 @@ describe Member do
 		before { @member.peoplesoft = 5 }
 		it { should_not be_valid }
 	end
+
+	#describe "full name should be equal to first and last" do
+	#	expect(@member.name).to eq "#{@member.first} #{@member.last}"
+	#end
 
 	describe "when email format is invalid" do
 		it "should be invalid" do

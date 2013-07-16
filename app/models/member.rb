@@ -19,4 +19,8 @@ class Member < ActiveRecord::Base
 
 	has_secure_password
 
+	def name
+		"#{self.first} #{self.last}"
+	end
+
 end
