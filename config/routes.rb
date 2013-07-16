@@ -1,5 +1,6 @@
 DxWebsite::Application.routes.draw do
   
+  get "members/new"
   #External pages (no authorization required to view)
   root to: 'external_pages#Index'
   match "/about",     to: "external_pages#About",     via: 'get'
