@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130716024242) do
+ActiveRecord::Schema.define(version: 20130716031339) do
 
   create_table "members", force: true do |t|
     t.string   "first"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20130716024242) do
     t.string   "email"
     t.integer  "phone"
     t.string   "carrier"
-    t.integer  "proplesoft"
+    t.integer  "peoplesoft"
     t.integer  "two_p"
     t.string   "address"
     t.string   "status"
