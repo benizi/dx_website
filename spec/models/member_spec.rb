@@ -2,7 +2,9 @@ require 'spec_helper'
 
 describe Member do
 
-	before { @member = Member.new(first: "Example", last: "Member", email: "foo@bar.com", status: "active")}
+	before { @member = Member.new(first: "Peter", last: "Schemerhorn Johnson", 
+						email: "foo@bar.com", status: "active",
+						password: "foobar", password_confirmation: "foobar") }
 
 	subject { @member }
 
@@ -15,6 +17,10 @@ describe Member do
 	it { should respond_to(:two_p) }
 	it { should respond_to(:address) }
 	it { should respond_to(:status) }
+	it { should respond_to(:password_digest) }
+	it { should respond_to(:password) }
+	it { should respond_to(:password_confirmation) }
+	it { should respond_to(:authenticate) }
 
 	it { should be_valid }
 
@@ -48,6 +54,16 @@ describe Member do
 		it { should_not be_valid}
 	end
 
+	describe "when peoplesoft is too long" do
+		before { @member.peoplesoft = 555555555 }
+		it { should_not be_valid}
+	end
+
+	describe "when peoplesoft is too short" do
+		before { @member.peoplesoft = 5 }
+		it { should_not be_valid }
+	end
+
 	describe "when email format is invalid" do
 		it "should be invalid" do
 			addresses = %w[user@foo,com user_at_foo.org example.user@foo.
@@ -77,6 +93,41 @@ describe Member do
 			member_with_same_email.save		
 		end
 
+		it { should_not be_valid }
+	end
+
+	describe "return value of authenticate method" do
+		before { @member.save }
+		let(:found_member) { Member.find_by(email: @member.email) }
+
+		describe "with valid password" do
+			it { should eq found_member.authenticate(@member.password) }
+		end
+
+		describe "with invalid password" do
+			let(:member_for_invalid_password) { found_member.authenticate("invalid") }
+
+			it { should_not eq member_for_invalid_password }
+			specify { expect(member_for_invalid_password).to be_false }
+		end
+	end
+
+	describe "when password is too short" do
+		before { @member.password = @member.password_confirmation = 'a' * 5 }
+		it { should be_invalid }
+	end
+
+	describe "when password is not present" do
+		before do
+			@member = Member.new(first: "Peter", last:"Schemerhorn Johnson", 
+						email: "foo@bar.com", status: "active",
+						password: " ", password_confirmation: "foobar")
+		end
+		it { should_not be_valid}
+	end
+
+	describe "when password doesn't match confirmation" do
+		before { @member.password_confirmation ="mismatch" }
 		it { should_not be_valid }
 	end
 
