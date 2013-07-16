@@ -48,6 +48,9 @@ gem 'jbuilder', '~> 1.2'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+#Use Bootstrap for styling
+#gem 'bootstrap-sass' 
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
