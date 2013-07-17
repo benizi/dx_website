@@ -1,1 +1,10 @@
-<%= @member.name %>, <%= @member.email %>
+<% provide(:title, @member.name) %>
+<h1>
+	<%= gravatar_for(@member) %>
+	<%= @member.name %>
+</h1>
+
+<span>email: <%= @member.email %></span> <br/>
+<span>address: <%= @member.address %></span> <br/>
+<span>phone: <%= @member.phone %></span> <br/>
+<span>status/position: <%= @member.status %></span>

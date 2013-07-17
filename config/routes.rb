@@ -2,7 +2,7 @@ DxWebsite::Application.routes.draw do
   
   #Member object functions
   resources :members
-  match "/new",       to: "members#new",   via: 'get'
+  match "/register",  to: "members#new",  via: 'get'
 
   #External pages (no authorization required to view)
   root to: 'external_pages#Index'
