@@ -79,7 +79,7 @@ form {
   height: 500px;
 }
 
-.frat-name{
+.frat-name {
   font-size: 95px;
   padding-top: 200px;
   z-index: 10;
@@ -103,14 +103,7 @@ form {
     float: none;
     margin: 0 0 30px 20px;
   }
-
-  .main-background {
-    height: 500px;
-  }
-  .main-background img {
-    width: auto;
-    height: 500px;
-  }
+}
 
 
 @media (max-width: 767px) {
@@ -137,8 +130,7 @@ form {
     margin-right: -20px;
     height: 300px;
   }
-
-  }
+  
   .main-background img {
     height: 300px;
   }
