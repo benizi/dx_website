@@ -1,20 +1,20 @@
 class ExternalPagesController < ApplicationController
   
-  def Index
+  def index
   end
 
-  def About
+  def about
   end
 
-  def Alumni
+  def alumni
   end
 
-  def Brothers
+  def brothers
   end
 
-  def Contact
+  def contact
   end
 
-  def Rush
+  def rush
   end
 end
