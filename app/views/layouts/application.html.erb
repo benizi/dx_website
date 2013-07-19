@@ -7,18 +7,25 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!--css-->
+  <!--css/javascript-->
+  <%= stylesheet_link_tag "application", media: "all",                                       "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application",
+                                           "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+  <!-- These are replaced by the application asset pipline
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
-  
+  -->
+
   <body>
-  <%= render partial: 'layouts/header' %>
-  <%= yield %>
+    <%= render partial: 'layouts/header' %>
+    <%= yield %>
 
-  <%= debug(params) if Rails.env.development? %>
+    <%= debug(params) if Rails.env.development? %>
 
-  <!--js-->
+  <!--Same as above here
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap-transition.js"></script>
   <script src="js/bootstrap-alert.js"></script>
@@ -33,6 +40,7 @@
   <script src="js/bootstrap-carousel.js"></script>
   <script src="js/bootstrap-typeahead.js"></script>
   <script src="js/holder.js"></script>
+  -->
 
-</body>
+  </body>
 </html>

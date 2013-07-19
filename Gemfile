@@ -49,7 +49,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 #Use Bootstrap for styling
-#gem 'bootstrap-sass' 
+ gem 'bootstrap-sass'
 
 # Use unicorn as the app server
 # gem 'unicorn'
