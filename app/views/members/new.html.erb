@@ -2,20 +2,21 @@
 <h1>Register</h1>
 
 <%= form_for(@member) do |f| %>
+	<%= render 'shared/error_messages' %>
 
-	<%= f.label :first %>
+	<%= f.label :first, "First Name" %>
 	<%= f.text_field :first %>
 
-	<%= f.label :last %>
+	<%= f.label :last, "Last Name" %>
 	<%= f.text_field :last %>
 
-	<%= f.label :email %>
+	<%= f.label :email, "Email Address" %>
 	<%= f.text_field :email %>
 
-	<%= f.label :peoplesoft %>
+	<%= f.label :peoplesoft, "Peoplesoft Number" %>
 	<%= f.text_field :peoplesoft %>
 
-	<%= f.label :two_p %>
+	<%= f.label :two_p, "2P Number" %>
 	<%= f.text_field :two_p %>
 
 	<%= f.label :phone %>
@@ -27,10 +28,10 @@
 	<%= f.label :address %>
 	<%= f.text_field :address %>
 
-	<%= f.label :password %>
+	<%= f.label :password, "PAssword" %>
 	<%= f.password_field :password %>
 	
-	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.label :password_confirmation, "Re-type Password" %>
 	<%= f.password_field :password_confirmation %>
 
 	<%= f.submit "Submit for C's approval" %>

@@ -9,7 +9,7 @@ class Member < ActiveRecord::Base
 	validates :last, presence: true, length: { maximum: 50 }
 	validates :status, presence: true
 	validates :password, length:  { minimum: 6 }
-	
+	validates :two_p, length: { is: 11 }, allow_blank: true
 	validates :peoplesoft, 	length: { is: 7 },
 						   	allow_blank: true
 

@@ -32,17 +32,25 @@ describe "Member pages" do
 
 		describe "with valid information" do
 			before do
-				fill_in "First Name",	with: "Peter"
-				fill_in "Last Name",	with: "Schemerhorn Johnson"
-				fill_in "Email",		with: "user@example.com"
-				fill_in "Peoplesoft #",	with: "3578411"
-				fill_in "Password",		with: "foobar"
-				fill_in "Confirmation",	with: "foobar"
+				fill_in "First Name",		with: "Peter"
+				fill_in "Last Name",		with: "Schemerhorn Johnson"
+				fill_in "Email Address",	with: "user@example.com"
+				#fill_in "Peoplesoft Number",with: "3578411"
+				fill_in "PAssword",			with: "foobar"
+				fill_in "Re-type Password",	with: "foobar"
 			end
 
 			it "should create a user" do
 				expect {click_button submit }.to change(Member, :count).by(1)
 			end
+
+			describe "after saving the user" do
+		        before { click_button submit }
+		        let(:member) { Member.find_by(email: 'user@example.com') }
+
+		        it { should have_title(member.name) }
+		        it { should have_content('The C is required to') }
+      		end
 		end
 	end
 end
