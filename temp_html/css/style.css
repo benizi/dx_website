@@ -59,37 +59,32 @@ form {
 
 }
 
-/*--carousel--*/
+/*--main-background--*/
 
-/* Carousel base class */
-.carousel {
-  margin-bottom: 60px;
+.main-background {
+  margin-bottom: 40px;
+  height: 500px;
 }
 
-.carousel .container {
+.main-background {
   position: relative;
   z-index: 9;
 }
 
-.carousel-control {
-  height: 80px;
-  margin-top: 0;
-  font-size: 120px;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-  background-color: transparent;
-  border: 0;
-  z-index: 10;
-}
-
-.carousel .item {
-  height: 500px;
-}
-.carousel img {
+.main-background img {
   position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
   height: 500px;
+}
+
+.frat-name {
+  font-size: 95px;
+  padding-top: 200px;
+  z-index: 10;
+  position: absolute;
+  color: white;
 }
 
 /*--responcive--*/
@@ -101,21 +96,14 @@ form {
   }
 
   .navbar-inner {
-    margin: -20px 0 0 0;
+    margin: -10px 0 0 0;
   }
 
   form{
     float: none;
     margin: 0 0 30px 20px;
   }
-
-  .carousel .item {
-    height: 500px;
-  }
-  .carousel img {
-    width: auto;
-    height: 500px;
-  }
+}
 
 
 @media (max-width: 767px) {
@@ -129,21 +117,21 @@ form {
     margin: 0 0 30px 20px;
   }
 
-  .navbar-inner {
-    margin: -20px 0 0 0;
+  .container {
+    margin: 0 20px 0 20px;
   }
 
-  .carousel {
+  .navbar-inner {
+    margin: -10px 0 0 0;
+  }
+
+  .main-background {
     margin-left: -20px;
     margin-right: -20px;
-  }
-  .carousel .container {
-
-  }
-  .carousel .item {
     height: 300px;
   }
-  .carousel img {
+  
+  .main-background img {
     height: 300px;
   }
 

@@ -1,12 +1,16 @@
 DxWebsite::Application.routes.draw do
   
+  #Member object functions
+  resources :members
+  match "/register",  to: "members#new",  via: 'get'
+
   #External pages (no authorization required to view)
-  root to: 'external_pages#Index'
-  match "/about",     to: "external_pages#About",     via: 'get'
-  match "/alumni",    to: "external_pages#Alumni",    via: 'get'
-  match "/brothers",  to: "external_pages#Brothers",  via: 'get'
-  match "/contact",   to: "external_pages#Contact",   via: 'get'
-  match "/rush",      to: "external_pages#Rush",      via: 'get'
+  root to: 'external_pages#index'
+  match "/about",     to: "external_pages#about",     via: 'get'
+  match "/alumni",    to: "external_pages#alumni",    via: 'get'
+  match "/brothers",  to: "external_pages#brothers",  via: 'get'
+  match "/contact",   to: "external_pages#contact",   via: 'get'
+  match "/rush",      to: "external_pages#rush",      via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

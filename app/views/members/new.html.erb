@@ -1,0 +1,37 @@
+<% provide(:title, "Register") %>
+<h1>Register</h1>
+
+<%= form_for(@member) do |f| %>
+
+	<%= f.label :first %>
+	<%= f.text_field :first %>
+
+	<%= f.label :last %>
+	<%= f.text_field :last %>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %>
+
+	<%= f.label :peoplesoft %>
+	<%= f.text_field :peoplesoft %>
+
+	<%= f.label :two_p %>
+	<%= f.text_field :two_p %>
+
+	<%= f.label :phone %>
+	<%= f.text_field :phone %>
+
+	<%= f.label :carrier %>
+	<%= f.text_field :carrier %>
+
+	<%= f.label :address %>
+	<%= f.text_field :address %>
+
+	<%= f.label :password %>
+	<%= f.password_field :password %>
+	
+	<%= f.label :password_confirmation, "Confirmation" %>
+	<%= f.password_field :password_confirmation %>
+
+	<%= f.submit "Submit for C's approval" %>
+<% end %>
