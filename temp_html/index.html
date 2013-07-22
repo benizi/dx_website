@@ -35,6 +35,9 @@
       </div>
     </nav>
 
+    <div id="content">
+      <h3>TED</h3>
+    </div>
   </div>
 <script src="jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
@@ -48,6 +51,12 @@ $(document).ready(function() {
     else {
       $('#wrapper').addClass('cbp-spmenu-push-toleft')
       $('#cbp-spmenu-s2').addClass('cbp-spmenu-open');
+    }
+  };
+  content.onclick = function() {
+    if($('#wrapper').hasClass('cbp-spmenu-push-toleft')) {
+      $('#wrapper').removeClass('cbp-spmenu-push-toleft')
+      $('#cbp-spmenu-s2').removeClass('cbp-spmenu-open');
     }
   };
 });
