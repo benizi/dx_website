@@ -15,12 +15,11 @@
   <div id="wrapper" class="cbp-spmenu-push">
     <div class="side-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
       <h3>Menu</h3>
-      <a href="#">Celery seakale</a>
-      <a href="#">Dulse daikon</a>
-      <a href="#">Zucchini garlic</a>
-      <a href="#">Catsear azuki bean</a>
-      <a href="#">Dandelion bunya</a>
-      <a href="#">Rutabaga</a>
+      <a href="#">Home</a>
+      <a href="#">Aboutn</a>
+      <a href="#">Rush</a>
+      <a href="#">Brothers</a>
+      <a href="#">Contact</a>
     </div>
 
     <nav class="clearfix">
@@ -37,14 +36,21 @@
     </nav>
 
   </div>
-<script src="classie.js"></script>
+<script src="jquery-2.0.3.min.js"></script>
 <script type="text/javascript">
- 
-pushright.onclick = function() {
-    classie.toggle( this, 'active' );
-    classie.toggle( document.getElementById( 'wrapper' ), 'cbp-spmenu-push-toleft' );
-    classie.toggle( document.getElementById( 'cbp-spmenu-s2' ), 'cbp-spmenu-open' );
-};
+
+$(document).ready(function() {
+  pushright.onclick = function() {
+    if($('#wrapper').hasClass('cbp-spmenu-push-toleft')) {
+      $('#wrapper').removeClass('cbp-spmenu-push-toleft')
+      $('#cbp-spmenu-s2').removeClass('cbp-spmenu-open');
+    }
+    else {
+      $('#wrapper').addClass('cbp-spmenu-push-toleft')
+      $('#cbp-spmenu-s2').addClass('cbp-spmenu-open');
+    }
+  };
+});
  
 </script>
 </body>
