@@ -1,0 +1,167 @@
+/*
+CSS for Delta Chi Website
+*/
+
+body {
+  background-color: #EDEDED;
+  margin: 0;
+}
+
+/*--nav--*/
+
+nav {  
+  height: 50px;  
+  width: 100%;  
+  background: #B7C0C9;  
+  font-size: 11pt;  
+  font-family: 'PT Sans', Arial, sans-serif;  
+  font-weight: bold;  
+  position: relative;    
+} 
+nav ul {  
+  padding: 0;  
+  margin: 0 auto;  
+  width: 600px;  
+  height: 40px;  
+} 
+
+nav li {  
+  display: inline;  
+  float: left;  
+} 
+
+nav a {  
+  color: #fff;  
+  display: inline-block;  
+  width: 100px;  
+  text-align: center;  
+  text-decoration: none;  
+  line-height: 50px;  
+  text-shadow: 1px 1px 0px #283744;  
+} 
+
+.menu-btn {
+  background-color: #80868C;
+  width:25px;
+  border-radius: 50%;
+  padding: 8px;
+  float: right;
+  margin: 6px 6px;
+  display:none;
+}
+
+.menu-btn-lines {
+  border-bottom: 12px double black; 
+  border-top: 4px solid black; 
+  content: "";
+  height: 4px; 
+  border-color: #EDEDED;
+} 
+
+.clearfix:before,  
+.clearfix:after {  
+  content: " ";  
+  display: table;  
+}  
+.clearfix:after {  
+  clear: both;  
+}  
+.clearfix {  
+  *zoom: 1;  
+}  
+
+/*side-nav*/
+.side-nav {
+  display: none;
+}
+
+.cbp-spmenu {
+  background: #47a3da;
+  position: fixed;
+}
+ 
+.cbp-spmenu h3 {
+  color: #afdefa;
+  font-size: 1.9em;
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  background: #0d77b6;
+}
+ 
+.cbp-spmenu a {
+  display: block;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+ 
+.cbp-spmenu a:hover {
+  background: #258ecd;
+}
+ 
+.cbp-spmenu a:active {
+  background: #afdefa;
+  color: #47a3da;
+}
+ 
+/* Orientation-dependent styles for the content of the menu */ 
+.cbp-spmenu-vertical {
+  width: 240px;
+  height: 100%;
+  top: 0;
+  z-index: 1000;
+}
+ 
+.cbp-spmenu-vertical a {
+  border-bottom: 1px solid #258ecd;
+  padding: 1em;
+}
+
+/* Vertical menu that slides from the left or right */
+.cbp-spmenu-right {
+  right: -240px;
+}
+ 
+.cbp-spmenu-right.cbp-spmenu-open {
+  right: 0px;
+}
+ 
+/* Push classes applied to the body */
+.cbp-spmenu-push {
+  overflow-x: hidden;
+  position: relative;
+  left: 0;
+}
+ 
+.cbp-spmenu-push-toleft {
+  left: -240px;
+}
+ 
+/* Transitions */
+.cbp-spmenu,
+.cbp-spmenu-push {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/*--media-queries--*/
+@media (max-width: 767px) {
+
+}
+
+@media (max-width : 480px) {  
+  .side-nav {
+  display: block;
+  }
+  nav ul {  
+    display: none;  
+    height: auto;  
+  }  
+
+  nav .menu-btn{  
+    display: block;   
+    position: relative;  
+  }
+} 

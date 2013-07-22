@@ -1,88 +1,52 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>Pitt Delta Chi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!--css-->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/bootstrap-responsive.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <title>Pitt Delta Chi</title>
+
+  <link href="style.css" rel="stylesheet">
   
   <body>
-  <!--navbar-->
-  <div class="navbar-wrapper">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <!--menu-icon-mobile-dropdown-->
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <div class="nav-collapse collapse container">
-          <ul class="nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Brothers</a></li>
-            <li><a href="#">Rush</a></li>
-          </ul>
-          <form class="form-inline">
-            <input type="text" class="nav-login input-small" placeholder="Email">
-            <input type="password" class="nav-login input-small" placeholder="Password">
-            <button type="submit" class="nav-login btn">Sign In</button>
-          </form>
-        </div><!--nav-collapse-->
-      </div><!--navbar-inner-->
-    </div><!--navbar-->
-  </div><!--navbar-wrapper-->
+  <div id="wrapper" class="cbp-spmenu-push">
+    <div class="side-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+      <h3>Menu</h3>
+      <a href="#">Celery seakale</a>
+      <a href="#">Dulse daikon</a>
+      <a href="#">Zucchini garlic</a>
+      <a href="#">Catsear azuki bean</a>
+      <a href="#">Dandelion bunya</a>
+      <a href="#">Rutabaga</a>
+    </div>
 
-  <!--main-background-->
-  <div class="main-background">
-    <h2 class="frat-name">Pitt Delta Chi</h2>
-    <img src="img/slide-01.jpg" alt="">
-  </div><!--main-background-->
+    <nav class="clearfix">
+      <ul class="clearfix">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Rush</a></li>
+        <li><a href="#">Brothers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div id="push-right" class="menu-btn">
+        <div class="menu-btn-lines"/>
+      </div>
+    </nav>
 
-  <div class="container">
-    <div class="row">
-      <div class="span4">
-        <h2>RUSH</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div><!-- /.span4 -->
-      <div class="span4">
-        <h2>WELCOME</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div><!-- /.span4 -->
-      <div class="span4">
-        <h2>TWITTER</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn" href="#">View details »</a></p>
-      </div><!-- /.span4 -->
-    </div><!-- /.row -->
   </div>
-
-
-  <!--js-->
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap-transition.js"></script>
-  <script src="js/bootstrap-alert.js"></script>
-  <script src="js/bootstrap-modal.js"></script>
-  <script src="js/bootstrap-dropdown.js"></script>
-  <script src="js/bootstrap-scrollspy.js"></script>
-  <script src="js/bootstrap-tab.js"></script>
-  <script src="js/bootstrap-tooltip.js"></script>
-  <script src="js/bootstrap-popover.js"></script>
-  <script src="js/bootstrap-button.js"></script>
-  <script src="js/bootstrap-collapse.js"></script>
-  <script src="js/bootstrap-carousel.js"></script>
-  <script src="js/bootstrap-typeahead.js"></script>
-  <script src="js/holder.js"></script>
-
+<script src="classie.js"></script>
+<script type="text/javascript">
+ 
+push-right.onclick = function() {
+    classie.toggle( this, 'active' );
+    classie.toggle( document.getElementById( 'wrapper' ), 'cbp-spmenu-push-toleft' );
+    classie.toggle( document.getElementById( 'cbp-spmenu-s2' ), 'cbp-spmenu-open' );
+};
+ 
+</script>
 </body>
+
 </html>
