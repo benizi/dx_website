@@ -12,54 +12,55 @@
   <link href="style.css" rel="stylesheet">
   
   <body>
-  <div id="wrapper" class="cbp-spmenu-push">
-    <div class="side-nav cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
-      <h3>Menu</h3>
-      <a href="#">Home</a>
-      <a href="#">Aboutn</a>
-      <a href="#">Rush</a>
-      <a href="#">Brothers</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <nav class="clearfix">
-      <ul class="clearfix">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Rush</a></li>
-        <li><a href="#">Brothers</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div id="pushright" class="menu-btn">
-        <div class="menu-btn-lines"/>
+    <div id="wrapper" class="side-nav-push">
+      <div class="side-nav">
+        <h3>Menu</h3>
+        <a href="#">Home</a>
+        <a href="#">Aboutn</a>
+        <a href="#">Rush</a>
+        <a href="#">Brothers</a>
+        <a href="#">Contact</a>
       </div>
-    </nav>
 
-    <div id="content">
-      <h3>TED</h3>
+      <nav class="clearfix">
+        <ul class="clearfix">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Rush</a></li>
+          <li><a href="#">Brothers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="pushright" class="menu-btn">
+          <div class="menu-btn-lines"/>
+        </div>
+      </nav>
+
+      <div id="content">
+        <h3>TEST</h3>
+      </div>
     </div>
-  </div>
-<script src="jquery-2.0.3.min.js"></script>
-<script type="text/javascript">
 
-$(document).ready(function() {
-  pushright.onclick = function() {
-    if($('#wrapper').hasClass('cbp-spmenu-push-toleft')) {
-      $('#wrapper').removeClass('cbp-spmenu-push-toleft')
-      $('#cbp-spmenu-s2').removeClass('cbp-spmenu-open');
-    }
-    else {
-      $('#wrapper').addClass('cbp-spmenu-push-toleft')
-      $('#cbp-spmenu-s2').addClass('cbp-spmenu-open');
-    }
-  };
-  content.onclick = function() {
-    if($('#wrapper').hasClass('cbp-spmenu-push-toleft')) {
-      $('#wrapper').removeClass('cbp-spmenu-push-toleft')
-      $('#cbp-spmenu-s2').removeClass('cbp-spmenu-open');
-    }
-  };
-});
+  <script src="jquery-2.0.3.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    pushright.onclick = function() {
+      if($('#wrapper').hasClass('side-nav-push-toleft')) {
+        $('#wrapper').removeClass('side-nav-push-toleft')
+        $('.side-nav').removeClass('side-nav-open');
+      }
+      else {
+        $('#wrapper').addClass('side-nav-push-toleft')
+        $('.side-nav').addClass('side-nav-open');
+      }
+    };
+
+    content.onclick = function() {
+      if($('#wrapper').hasClass('side-nav-push-toleft')) {
+        $('#wrapper').removeClass('side-nav-push-toleft')
+        $('.side-nav').removeClass('side-nav-open');
+      }
+    };
+  });
  
 </script>
 </body>
