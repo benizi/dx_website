@@ -5,6 +5,7 @@ CSS for Delta Chi Website
 body {
   background-color: #EDEDED;
   margin: 0;
+  font-family: helvetica;
 }
 
 /*--nav--*/
@@ -19,10 +20,10 @@ nav {
   position: relative;    
 } 
 nav ul {  
-  padding: 0;  
+  height: 40px;
+  width: 600px;    
   margin: 0 auto;  
-  width: 600px;  
-  height: 40px;  
+  padding: 0;  
 } 
 
 nav li {  
@@ -31,23 +32,22 @@ nav li {
 } 
 
 nav a {  
+  width: 100px;
   color: #fff;  
-  display: inline-block;  
-  width: 100px;  
+  display: inline-block;    
   text-align: center;  
   text-decoration: none;  
-  line-height: 50px;  
-  text-shadow: 1px 1px 0px #283744;  
+  line-height: 50px;   
 } 
 
 .menu-btn {
+  display: none;
+  width: 25px;
   background-color: #80868C;
-  width:25px;
   border-radius: 50%;
-  padding: 8px;
   float: right;
   margin: 6px 6px;
-  display:none;
+  padding: 8px;
 }
 
 .menu-btn-lines {
@@ -73,39 +73,33 @@ nav a {
 /*side-nav*/
 .side-nav {
   display: none;
-  background: #47a3da;
-  position: fixed;
-  width: 240px;
   height: 100%;
-  top: 0;
+  width: 250px;
   z-index: 1000;
-  right: -240px;
-}
- 
-.side-nav h3 {
-  color: #afdefa;
-  font-size: 1.9em;
-  padding: 20px;
-  margin: 0;
-  font-weight: 300;
-  background: #0d77b6;
+  top: 0;
+  right: -250px;
+  background: #2F3336;
+  position: fixed;
+  padding-top: 50px;
 }
  
 .side-nav a {
   display: block;
-  color: #fff;
-  font-size: 1.1em;
-  font-weight: 300;
-  border-bottom: 1px solid #258ecd;
-  padding: 1em;
+  height: 26px;
+  color: #F7F7F7;
+  text-align: center;
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 26px;
+  padding: 12px;
 }
  
 .side-nav a:hover {
-  background: #258ecd;
+  color: #EBEBEB;
 }
  
 .side-nav a:active {
-  background: #afdefa;
   color: #47a3da;
 }
  
@@ -121,7 +115,7 @@ nav a {
 }
  
 .side-nav-push-toleft {
-  left: -240px;
+  left: -250px;
 }
  
 /* Transitions */
@@ -133,14 +127,8 @@ nav a {
 }
 
 /*--media-queries--*/
-@media (max-width: 767px) {
 
-}
-
-@media (max-width : 480px) {  
-  .side-nav {
-  display: block;
-  }
+@media (max-width: 480px) {  
   nav ul {  
     display: none;  
     height: auto;  
@@ -149,5 +137,9 @@ nav a {
   nav .menu-btn{  
     display: block;   
     position: relative;  
+  }
+
+  .side-nav {
+    display: block;
   }
 } 
