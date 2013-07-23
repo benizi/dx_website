@@ -6,7 +6,8 @@ class SessionsController < ApplicationController
 	def create
 		member = Member.find_by(email: params[:session][:email])
 		if member && Member.authenticate(params[:session][:password])
-			#Sign in member
+			sign_in member
+			redirect_to_user
 		else
 			flash.now[:error] = "Invalid email/password"
 			render 'new'
