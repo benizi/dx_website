@@ -10,35 +10,34 @@ body {
 
 /*--nav--*/
 
-nav {  
-  height: 50px;  
-  width: 100%;  
-  background: #B7C0C9;  
-  font-size: 11pt;  
-  font-family: 'PT Sans', Arial, sans-serif;  
-  font-weight: bold;  
-  position: relative;    
-} 
-nav ul {  
+nav {
+  height: 50px;
+  width: 100%;
+  background: #B7C0C9;
+  font-size: 11pt;
+  position: relative;
+}
+
+nav ul {
   height: 40px;
-  width: 600px;    
-  margin: 0 auto;  
-  padding: 0;  
-} 
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+}
 
-nav li {  
-  display: inline;  
-  float: left;  
-} 
+nav li {
+  display: inline;
+  float: left;
+}
 
-nav a {  
+nav a {
   width: 100px;
-  color: #fff;  
-  display: inline-block;    
-  text-align: center;  
-  text-decoration: none;  
-  line-height: 50px;   
-} 
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+}
 
 .menu-btn {
   display: none;
@@ -51,24 +50,24 @@ nav a {
 }
 
 .menu-btn-lines {
-  border-bottom: 12px double black; 
-  border-top: 4px solid black; 
+  border-bottom: 12px double black;
+  border-top: 4px solid black;
   content: "";
-  height: 4px; 
+  height: 4px;
   border-color: #EDEDED;
-} 
+}
 
-.clearfix:before,  
-.clearfix:after {  
-  content: " ";  
-  display: table;  
-}  
-.clearfix:after {  
-  clear: both;  
-}  
-.clearfix {  
-  *zoom: 1;  
-}  
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
 
 /*side-nav*/
 .side-nav {
@@ -82,7 +81,7 @@ nav a {
   position: fixed;
   padding-top: 50px;
 }
- 
+
 .side-nav a {
   display: block;
   height: 26px;
@@ -94,30 +93,30 @@ nav a {
   line-height: 26px;
   padding: 12px;
 }
- 
+
 .side-nav a:hover {
   color: #EBEBEB;
 }
- 
+
 .side-nav a:active {
   color: #47a3da;
 }
- 
+
 .side-nav-open {
   right: 0px;
 }
- 
+
 /* Push classes applied to the body */
 .side-nav-push {
   overflow-x: hidden;
   position: relative;
   left: 0;
 }
- 
+
 .side-nav-push-toleft {
   left: -250px;
 }
- 
+
 /* Transitions */
 .side-nav,
 .side-nav-push {
@@ -128,18 +127,18 @@ nav a {
 
 /*--media-queries--*/
 
-@media (max-width: 480px) {  
-  nav ul {  
-    display: none;  
-    height: auto;  
-  }  
+@media (max-width: 480px) {
+  nav ul {
+    display: none;
+    height: auto;
+  }
 
-  nav .menu-btn{  
-    display: block;   
-    position: relative;  
+  nav .menu-btn{
+    display: block;
+    position: relative;
   }
 
   .side-nav {
     display: block;
   }
-} 
+}
